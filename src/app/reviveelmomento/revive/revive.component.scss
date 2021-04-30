@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+.banner{
+    //background: transparent url('/app/graduacion2021/assets/img/banner/2.jpg') center center no-repeat;
+    background: transparent url('/app/graduacion2021/assets/img/banner/5.jpg') center center no-repeat;
+    background-size: contain;
+    @media (max-width: 768px) {
+        background-size: cover;
+        }
+
+}
+
+.susubtitle{
+    font-family: map-get($fonts,base );
+    color:#fff;
+    display: block;
+    font-size: 25px;
+    text-align: left;
+}
+.raya{
+    width: 10%;
+    position: relative;
+    bottom: 1px;
+    left:1%;
+    height: 2px;
+    background: #FEB238;
+   
+    margin-bottom: 40px;
+}
+.btn-secondary{
+    font-size: 12px;
+    border-color: #FEB238;
+}
+
+.gb{
+    font-size: 25px;
+}

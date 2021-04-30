@@ -1,0 +1,21 @@
+@import '../../../styles.scss';
+
+.banner{
+    //background: transparent url('/app/graduacion2021/assets/img/banner/2.jpg') center center no-repeat;
+    background: transparent url('/app/graduacion2021/assets/img/banner/6.jpg') center center no-repeat;
+    background-size: contain;
+    @media (max-width: 768px) {
+        background-size: cover;
+        }
+
+}
+.raya{
+    width: 100px;
+    position: relative;
+    bottom: 1px;
+    left:4.5%;
+    height: 2px;
+    background: #FEB238;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+}

@@ -28,10 +28,14 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/img",
+              "src/fonts"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -53,13 +57,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 }
               ]
             }
@@ -94,7 +98,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
@@ -127,5 +133,8 @@
       }
     }
   },
-  "defaultProject": "landigpage"
+  "defaultProject": "landigpage",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,105 @@
+@import '../../../styles.scss';
+
+.banner{
+    //background: transparent url('/app/graduacion2021/assets/img/banner/2.jpg') center center no-repeat;
+    background: transparent url('/app/graduacion2021/assets/img/banner/2.jpg') center center no-repeat;
+    background-size: contain;
+    @media (max-width: 768px) {
+        background-size: cover;
+        }
+
+}
+
+.susubtitle{
+    font-family: map-get($fonts,gotam );
+    color:#fff;
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 10px;
+}
+.raya{
+    width: 50%;
+    position: relative;
+    bottom: 1px;
+    left:50%;
+    height: 2px;
+    background: #FEB238;
+    transform: translateX(-50%);
+    margin-bottom: 40px;
+}
+.misbi{
+    font-family: map-get($fonts,gotamb );
+    color:#fff;
+    display: block;
+    font-size: 17px;
+}
+.misbit{
+    font-family: map-get($fonts,gotam );
+    color:#fff;
+    display: block;
+    font-size: 12px;
+    text-align: left;
+}
+.insd{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    font-size: 50px;
+    color: white;
+}
+.rayh{
+    position: absolute;
+    right: 1px;
+    height: 100%;
+    width: 2px;
+    background: #FEB238;
+    top: 0;
+}
+.btnd{
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    font-family: map-get($fonts,gotam );
+    color:#fff;
+    border:1px solid #FEB238;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.conttext{
+    padding: 10px 40px;
+    @media (max-width: 768px) {
+        padding: 0px 0px;
+    }
+    
+    & .cont{
+        background-color: #000;
+        padding: 25px 30px;
+        @media (max-width: 768px) {
+            padding: 0px 0px;
+        }
+    }
+}
+
+ul{
+    padding: 0;
+    & ol{
+        padding: 0;
+        text-align: left;
+    }
+}
+
+.rowgrn{
+    padding: 10px 73px 11px 0px;
+    @media (max-width: 768px) {
+        padding: 15px !important;
+    }
+}

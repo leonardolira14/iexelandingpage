@@ -1,1 +1,204 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+@font-face {
+    font-family: "w-b";
+    //src: url("/assets/fonts/Gotham Black Regular.ttf");
+    src: url("/app/graduacion2021/assets/fonts/Gotham Black Regular.ttf");
+  }
+
+  @font-face {
+    font-family: "w-m";
+    //src: url("/assets/fonts/Gotham Medium.otf");
+    src: url("/app/graduacion2021/assets/fonts/Gotham Medium.otf");
+  }
+
+  @font-face {
+    font-family: "g-b";
+    src: url("/app/graduacion2021/assets/fonts/GothamBook.ttf");
+    //src: url("/assets/fonts/GothamBook.ttf");
+  }
+  @font-face {
+    font-family: "g-b-b";
+    src: url("/app/graduacion2021/assets/fonts/Gotham-Black.otf");
+    //src: url("/assets/fonts/Gotham-Black.otf");
+  }
+
+  $fonts:(
+		  base:'w-m',
+      regular:'w-b',
+      gotam:'g-b',
+      gotamb:'g-b-b'
+    );
+    $colors: (
+    azuliexe:#99c1da,
+    card_riesgo:#87F2EA,
+    menu:#FEB238,
+    blanco:#fff,
+    azulcielo2:#E7F0FD,
+    azulprimary:#00204a,
+    primary:#0732B9,
+    azulcielo:#1476FC,
+    azulcielo3:#1476FC26,
+    azuladmyo:    #005d8f,
+    succes: #00a65a,
+    orange:#f7ac43,
+    naranja:  #fdb44b,
+    danger:#F2143F,
+    danger1:     #f53d3d,
+    dark:       #222,
+    gary-lte:  #d2d6de,
+    aqua: #87F2EA,
+    aqua2:#10E0D0,
+    yellow: #f39c12,
+    blue: #0073b7,
+    navy: #001F3F,
+    teal: #39CCCC,
+    olive: #3D9970,
+    lime: #01FF70,
+    secondary: #FF851B,
+    fuchsia: #F012BE,
+    purple: #605ca8,
+    maroon: #D81B60,
+    blackk: #000,
+    dark-2: #222d32,
+    light-gray: #444,
+    alight-gray:#d3d3d3d3,
+    red-danger:#F8E1E5,
+    red-t-danger:#F2143F,
+    white: #fff
+);
+
+
+$spaceamounts: (1,2,3,4,5, 10, 15, 20, 25, 30, 35, 40, 45, 50,55,60,65,70, 75,80,85,90,95,100,110,120,130,140);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  .p-#{"" +$space} {
+    padding: #{"" +$space}px !important;
+   }
+   .wpx-#{"" +$space} {
+    width: #{"" +$space}px !important;
+   }
+   .hpx-#{"" +$space} {
+    height: #{"" +$space}px !important;
+   }
+	@each $side in $sides {
+		.m-#{str-slice($side, 0, 1)}-#{$space} {
+			margin-#{$side}: #{$space}px !important;
+		}
+		.p-#{str-slice($side, 0, 1)}-#{$space} {
+			padding-#{$side}: #{$space}px !important;
+		}
+	}
+}
+@each $profile, $font in $fonts {
+	.text-#{"" +$profile}{
+		font-family: $font !important;
+	}
+}
+
+html, body { height: 100%; }
+body {
+   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+   background-color: map-get($colors, blackk)  !important;
+   //background-image: url('assets/img/textura.png') !important;
+   background-image: url('/app/graduacion2021/assets/img/textura.png') !important;
+  }
+h3,p{
+  font-family: map-get($fonts, base );
+  color: map-get($colors, white )  !important;
+  &.gb{
+    font-family: map-get($fonts, gotam );
+  }
+}
+
+h3{
+
+  font-size: 25px;
+   font-family: map-get($fonts, gotam );
+}
+p{
+  text-align: justify;
+  font-size: 15px;
+}
+.subtitulo{
+  line-height: 1.2;
+}
+.titulo{
+  font-weight: 700;
+}
+
+.banner{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  @media (max-width: 768px) {
+    height: 300px;
+    }
+  & .conta{
+     width: 40%;
+      position: relative;
+      top: 50%;
+      left:100px;
+      @media (max-width: 768px) {
+          width: 100%;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+      }
+  }
+  & .titulo, & .subtitulo, & .subtitulo2{
+     
+      display: block;
+      font-family: map-get($fonts,gotam );
+      color:#fff;
+      top: 80%;
+      width: 100%;
+     
+  }
+ & .subtitulo{
+   font-size: 35px;
+ }
+ & .subtitulo2{
+  font-size: 55px;
+  @media (max-width: 768px) {
+    font-size: 25px;
+  }
+}
+  & .titulo{
+    font-family: map-get($fonts,gotamb );
+      font-size: 45px;
+      margin-bottom: 30px;
+      line-height: 1;
+      @media (max-width: 768px) {
+        font-size: 45px;
+      }
+    
+  }
+  & .ray{
+    
+      position: absolute;
+      top: 100%;
+      left: 1%;
+      height: 4px;
+      width: 280px;
+      margin-top: 20px;
+      background-color: #FEB238;
+      background-color: map-get($colors, menu );
+      @media (max-width: 768px) {
+          width: 56%;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+      }
+  }
+
+}
+
+.conttet{
+  background-color: #000;
+  padding: 30px 50px;
+}

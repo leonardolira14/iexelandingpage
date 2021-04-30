@@ -1,0 +1,37 @@
+
+@import '../../../styles.scss';
+
+ul{
+    & li{
+        width: 5%;
+        @media (max-width: 768px) {
+            width: 20%;
+            }
+        & a{
+            display: block;
+            text-align: center;
+            & img{
+                text-align: center;
+            }
+        }
+    }
+}
+.icon_menu{
+    color:#fff;
+    font-size: 32px;
+}
+
+.icons_redesr{
+    list-style: none;
+    display: flex; 
+    justify-items: center;
+    justify-content: center;
+    & li{
+        & a{
+            & img{
+                width: 25px;
+                height: 25px;
+            }
+        }
+    }
+}

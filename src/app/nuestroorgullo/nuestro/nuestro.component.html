@@ -1,0 +1,105 @@
+<div class="banner">
+    <div class="conta">
+        <span class="titulo">Nuestro orgullo IEXE
+        </span>
+        <span class="ray" ></span>
+    </div>
+
+</div>
+<div class="container-fluid">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-sm-4 col-xl-4  col-lg-4  col-md-4 mt-5">
+            <div class="conte" (click)="openpop('MAPP')">
+                <div class="susubtitle">
+                    Maestría en Administración y Políticas Públicas
+                </div>
+                <br>
+                <div class="raya"></div>
+            </div>
+           
+        </div>
+        <div class="col-12 col-sm-4 col-xl-4  col-lg-4  col-md-4 mt-5" >
+            <div class="conte"  (click)="openpop('MEPP')">
+                <div class="susubtitle">
+                    Maestría en Evaluación de Políticas Públicas
+                </div>
+                <br>
+                <div class="raya"></div>
+            </div>
+           
+        </div>
+        <div class="col-12 col-sm-4 col-xl-4  col-lg-4  col-md-4 mt-5">
+            <div class="conte"  (click)="openpop('MFPP')">
+                <div class="susubtitle">
+                    Maestría en 
+                    Finanzas Públicas
+                </div>
+                <br>
+                <div class="raya"></div>
+            </div>
+           
+        </div>
+        <div class="col-12 col-sm-4 col-xl-4  col-lg-4  col-md-4 mt-5">
+            <div class="conte" (click)="openpop('MSPPP')">
+                <div class="susubtitle">
+                    Maestría en Seguridad Pública y Políticas Públicas
+                </div>
+                <br>
+                <div class="raya"></div>
+            </div>
+           
+        </div>
+        <div class="col-12 col-sm-4 col-xl-4  col-lg-4  col-md-4 mt-5">
+            <div class="conte">
+                <div class="susubtitle" (click)="openpop('MBP')">
+                    Maestría en Administración de Negocios
+                </div>
+                <br>
+                <div class="raya"></div>
+            </div>
+           
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12 col-sm-5 col-xl-5  col-lg-5  col-md-5 mt-5">
+            <div class="conte">
+                <a href="https://www.generacion.iexe.edu.mx/votacion" target="_blank" class="susubtitle">
+                    Vota por el alumno de la generación
+                </a>
+               
+            </div>
+           
+        </div>
+    </div>
+</div>
+
+<div class="popup" *ngIf="popup">
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="row justify-content-center ">
+            <div class="col-12 col-sm-9 col-lg-9 col-xl-9">
+                <div class="card w-100">
+                    <div class="card-body">
+                        <h5 class="card-title text-right">
+                          <span (click)="popup =!popup" class="material-icons">
+                              cancel
+                              </span>
+                        </h5>
+                        <p class="titulod">
+                              {{titulo}}
+                        </p>
+                        <div class="raya"></div>
+                        <ul>
+                            <li *ngFor="let item of form_lista">
+                                {{item}}
+                            </li>
+                        </ul>
+                      </div>
+                </div>
+                   
+                 
+            </div>
+        </div>
+    </div>
+</div>
