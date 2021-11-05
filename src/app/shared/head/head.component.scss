@@ -9,20 +9,20 @@
     justify-content: space-between;
     align-items: center;
     list-style: none;
-    
+
     & li{
-       
+
         padding: 0 7px;
-       
+
 }
 }
 .menu{
 
     & li{
-        border-right: 2px solid map-get($colors, secondary ) !important;
+        border-right: 2px solid map-get($colors, blue_iexe ) !important;
         padding: 0 7px;
         &:nth-last-child(1){
-            border-right: 0px solid map-get($colors, secondary ) !important;
+            border-right: 0px solid map-get($colors, blue_iexe ) !important;
         }
         & a{
             display: block;
@@ -33,11 +33,11 @@
             color:#fff;
             &:hover{
                 color:map-get($colors, gary-lte );
-                border-bottom: 2px solid map-get($colors, secondary ) !important;
+                border-bottom: 2px solid map-get($colors, blue_iexe ) !important;
             }
             &.ac{
                 color:map-get($colors, gary-lte );
-                border-bottom: 2px solid map-get($colors, secondary ) !important;
+                border-bottom: 2px solid map-get($colors, blue_iexe ) !important;
             }
         }
     }
@@ -59,23 +59,23 @@
     width: 80%;
     height: 100%;
     z-index: 100;
-    background-color: #000;
+    background-color: map-get($colors, principal );
     top: 0;
     left: -100%;
     transition:  all 0.5s ease-out;
- 
+
     &.active{
         left:0;
         transition:  all 0.5s ease-out;
-  
-  
+
+
     }
     & .list-group{
         width: 100%;
-        background-color: #000;
+        background-color: map-get($colors, principal );
         & li{
             border: 0px;
-            background-color: #000;
+            background-color: map-get($colors, principal );
             & a{
                 display: block;
                 color:#fff;
@@ -87,7 +87,7 @@
             }
             }
         }
-       
+
     }
 }
 
@@ -115,12 +115,12 @@
     transform: rotate(-90deg);
     @media (max-width: 768px) {
         right: -11%;
-  
+
         }
     & img{
         width: 70%;
         height: 70%;
-        
+
     }
     & span{
         margin-left:10px ;

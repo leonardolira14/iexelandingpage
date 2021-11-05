@@ -1,7 +1,7 @@
 @import '../../../styles.scss';
 .banner{
     //background: transparent url('/app/graduacion2021/assets/img/banner/2.jpg') center center no-repeat;
-    background: transparent url('/app/graduacion2021/assets/img/banner/4.jpg') center center no-repeat;
+    background: transparent url('/app/graduacion2021/assets/img/banner/banner_4_F.png') center center no-repeat;
     background-size: contain;
     @media (max-width: 768px) {
         background-size: cover;
@@ -25,10 +25,10 @@
       transform: translateX(-50%);
       height: 4px;
       width: 400px;
-      background-color: #FEB238;
-      background-color: map-get($colors, menu );
+      background-color: map-get($colors, blue_iexe);
+
       margin-top: 20px;
-      
+
       @media (max-width: 768px) {
           width: 56%;
           top: 100%;
@@ -39,17 +39,18 @@
 }
 
 .contr{
-    background: map-get($colors, blackk );
+
     color:#fff;
     font-family: map-get($fonts, gotam);
     padding: 20px 20px;
+    max-width: 78%;
 }
 .icono{
     margin-top: 50px;
-    border-right: 2px solid #FEB238;
+    border-right: 2px solid map-get($colors, blue_iexe );
     @media (max-width: 768px) {
-        border-right: 0px solid #FEB238;
-        
+        border-right: 0px solid map-get($colors, blue_iexe );
+
     }
     & img{
         margin: 0 auto;
@@ -57,7 +58,7 @@
         height: 30px;
         object-fit: cover;
     }
-    
+
 }
 .texto{
 
@@ -65,12 +66,12 @@
     font-size: 20px;
     @media (max-width: 768px) {
         text-align: center;
-        
+
     }
     & ul{
         margin-top: 50px;
         list-style: none;
-      
+
         & li{
             margin-top: 20px;
             display: flex;
@@ -78,11 +79,11 @@
             font-weight: 700;
             @media (max-width: 768px) {
                 text-align: left;
-                
+
             }
             &::before {
                 content: "O";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
-                color: #FEB238; /* Change the color */
+                color: map-get($colors, blue_iexe ); /* Change the color */
                 font-weight: bold; /* If you want it to be bold */
                 display: inline-block; /* Needed to add space between the bullet and the text */
                 width: 1em; /* Also needed for space (tweak if needed) */

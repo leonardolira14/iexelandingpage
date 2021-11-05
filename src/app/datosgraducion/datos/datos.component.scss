@@ -2,7 +2,7 @@
 
 .banner{
     //background: transparent url('/app/graduacion2021/assets/img/banner/2.jpg') center center no-repeat;
-    background: transparent url('/app/graduacion2021/assets/img/banner/2.jpg') center center no-repeat;
+    background: transparent url('/app/graduacion2021/assets/img/banner/banner_2_F.png') center center no-repeat;
     background-size: contain;
     @media (max-width: 768px) {
         background-size: cover;
@@ -24,7 +24,7 @@
     bottom: 1px;
     left:50%;
     height: 2px;
-    background: #FEB238;
+    background:map-get($colors, blue_iexe);;
     transform: translateX(-50%);
     margin-bottom: 40px;
 }
@@ -53,7 +53,7 @@
     right: 1px;
     height: 100%;
     width: 2px;
-    background: #FEB238;
+    background: map-get($colors, blue_iexe);
     top: 0;
 }
 .btnd{
@@ -63,8 +63,9 @@
     transform: translateX(-50%);
     width: 150px;
     font-family: map-get($fonts,gotam );
-    color:#fff;
-    border:1px solid #FEB238;
+    color:map-get($colors, principal);;
+    border:1px solid map-get($colors, blue_iexe);
+    background: map-get($colors, blue_iexe);
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 10px;
@@ -79,9 +80,9 @@ a{
     @media (max-width: 768px) {
         padding: 0px 0px;
     }
-    
+
     & .cont{
-        background-color: #000;
+
         padding: 25px 30px;
         @media (max-width: 768px) {
             padding: 0px 0px;

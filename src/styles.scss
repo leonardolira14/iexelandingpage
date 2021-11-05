@@ -31,6 +31,8 @@
       gotamb:'g-b-b'
     );
     $colors: (
+    principal:#001E42,
+    blue_iexe:#00FFE8,
     azuliexe:#99c1da,
     card_riesgo:#87F2EA,
     menu:#FEB238,
@@ -100,10 +102,10 @@ $sides: (top, bottom, left, right);
 
 html, body { height: 100%; }
 body {
-   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
-   background-color: map-get($colors, blackk)  !important;
+   margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
+   background-color: map-get($colors, principal)  !important;
    //background-image: url('assets/img/textura.png') !important;
-   background-image: url('/app/graduacion2021/assets/img/textura.png') !important;
+  // background-image: url('/app/graduacion2021/assets/img/textura.png') !important;
   }
 h3,p{
   font-family: map-get($fonts, base );
@@ -124,9 +126,17 @@ p{
 }
 .subtitulo{
   line-height: 1.2;
+
 }
 .titulo{
   font-weight: 700;
+  & span.blue{
+    color:map-get($colors, blue_iexe)
+
+  }
+  & span.blue_strong{
+    color:map-get($colors, principal)
+  }
 }
 
 .banner{
@@ -150,13 +160,13 @@ p{
       }
   }
   & .titulo, & .subtitulo, & .subtitulo2{
-     
+
       display: block;
       font-family: map-get($fonts,gotam );
       color:#fff;
       top: 80%;
       width: 100%;
-     
+
   }
  & .subtitulo{
    font-size: 35px;
@@ -175,18 +185,18 @@ p{
       @media (max-width: 768px) {
         font-size: 45px;
       }
-    
+
   }
   & .ray{
-    
+
       position: absolute;
       top: 100%;
       left: 1%;
       height: 4px;
       width: 280px;
       margin-top: 20px;
-      background-color: #FEB238;
-      background-color: map-get($colors, menu );
+      background-color: #fff;
+     // background-color: map-get($colors, menu );
       @media (max-width: 768px) {
           width: 56%;
           top: 100%;
@@ -199,6 +209,5 @@ p{
 }
 
 .conttet{
-  background-color: #000;
   padding: 30px 50px;
 }

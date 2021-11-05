@@ -2,7 +2,7 @@
 
 .banner{
      //background: transparent url('/app/graduacion2021/assets/img/banner/1.jpg') center center no-repeat;
-  background: transparent url('/app/graduacion2021/assets/img/banner/1.jpg') center center no-repeat;
+  background: transparent url('/app/graduacion2021/assets/img/banner/banner_1_F.png') center center no-repeat;
   background-size: contain;
   @media (max-width: 768px) {
     background-size: cover;
@@ -28,8 +28,18 @@
       display: block;
       text-align: right;
       width: 100%;
+
       @media (max-width: 768px) {
         text-align: center;
         }
+
+    }
+    & .raydiv{
+      width: 5px;
+      height: 90%;
+      position: relative;
+      top: 0;
+      left: 30%;
+      background: map-get($colors, blue_iexe);
     }
 }
